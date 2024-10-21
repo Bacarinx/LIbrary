@@ -7,14 +7,32 @@ namespace Biblioteca.Models
 {
     public class Book
     {
-        private string Title;
-        private string Author;
-        private string PublicationYear;
+        private string _Title;
+        private string _Author;
+        private int _PublicationYear;
 
-        public Book(string title, string author, string publicationYear) {
-            if (title != null) Title => title;
-            if (author != null) Author => Author;
-            if (publicationYear != null) PublicationYear => PublicationYear;
+        public string Title 
+        { 
+            get => _Title;
+            set => _Title = value; 
+        }
+
+        public string Author 
+        { 
+            get => _Author;
+            set => _Author = value;
+        }
+
+        public int PublicationYear 
+        {
+            get => _PublicationYear;
+            set => _PublicationYear = value;
+        }
+
+        public Book(string title, string author, int publicationYear) {
+            if (title != null) _Title = title;
+            if (author != null) _Author = author;
+            if (publicationYear > 0) _PublicationYear = publicationYear;
         }
     }
 }
