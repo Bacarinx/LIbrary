@@ -34,5 +34,7 @@ namespace Biblioteca.Models
             if (author != null) _Author = author;
             if (publicationYear > 0) _PublicationYear = publicationYear;
         }
+
+        public Book(){}
     }
 }
