@@ -1,0 +1,12 @@
+1. Sistema de Biblioteca
+Crie um sistema simples para gerenciar livros em uma biblioteca.
+
+Classes principais:
+
+Livro: contém propriedades como Título, Autor, AnoPublicacao, e um método para mostrar os detalhes do livro.
+
+Usuario: armazena informações do usuário da biblioteca, como Nome, ID, e um método para verificar 
+se o usuário pode pegar mais livros emprestados.
+
+Emprestimo: controla o processo de empréstimo, com propriedades como Usuario, Livro, DataEmprestimo e DataDevolucao. 
+Métodos para registrar empréstimo e devolução.

@@ -36,5 +36,11 @@ namespace Biblioteca.Models
         }
 
         public Book(){}
+
+        public void ShowDetailsBook() {
+            Console.WriteLine($"Nome do livro: {this._Title}");
+            Console.WriteLine($"Nome do autor: {this._Author}");
+            Console.WriteLine($"Ano de Publicação: {this._PublicationYear}");
+        }
     }
 }
