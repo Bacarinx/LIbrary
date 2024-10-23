@@ -30,8 +30,26 @@ namespace Biblioteca.Models
             get => BorrowBooks;
         }
 
-        public void AddBorowBoook(Book book) {
-            BorowBooks.Add(book.Title);
+        public void AddBorowBoook(Book book)
+        {
+            if (BorowBooks.Count() > 2)
+            {
+                BorowBooks.Add(book.Title);
+            }
+            else
+            {
+                Console.WriteLine("Leitor alcançou o número máxima de 3 livros emprestados, devolva um para poder emprestar outro.");
+            }
+        }
+
+        public void ReturnBook(Book book) {
+            if(BorowBooks.Contains(book.Title)){
+                BorowBooks.Remove(book.Title);
+                Console.WriteLine("Livro devolvido com sucesso!");
+            } else {
+                Console.WriteLine("Esse livro não está com você.");
+            }
+        
         }
 
         // public bool UserCanGetBook() {
