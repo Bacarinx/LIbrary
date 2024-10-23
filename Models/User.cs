@@ -14,9 +14,9 @@ namespace Biblioteca.Models
 
         private string _Nome;
         private string _ID;
-        private int BorowBooks;
+        private List<string> BorowBooks = new List<string>();
 
-        public string Nome{
+        public string Nome {
             get => _Nome;
             set => _Nome = value;
         }
@@ -26,8 +26,12 @@ namespace Biblioteca.Models
             set => _ID = value;
         }
 
-        public string BorrowBooks{
+        public string BorrowBooks {
             get => BorrowBooks;
+        }
+
+        public void AddBorowBoook(Book book) {
+            BorowBooks.Add(book.Title);
         }
 
         // public bool UserCanGetBook() {

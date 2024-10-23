@@ -8,5 +8,5 @@ Livro: contém propriedades como Título, Autor, AnoPublicacao, e um método par
 Usuario: armazena informações do usuário da biblioteca, como Nome, ID, e um método para verificar 
 se o usuário pode pegar mais livros emprestados.
 
-Emprestimo: controla o processo de empréstimo, com propriedades como Usuario, Livro, DataEmprestimo e DataDevolucao. 
-Métodos para registrar empréstimo e devolução.
+Emprestimo: controla o processo de empréstimo, com propriedades como Usuario, Livro, 
+DataEmprestimo e DataDevolucao. Métodos para registrar empréstimo e devolução.
