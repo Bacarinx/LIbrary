@@ -50,7 +50,6 @@ namespace Biblioteca.Models
 
         public void LendBook(User user){
             _FreeToLend = false;
-            user.AddBorowBoook(this);
         }
     }
 }

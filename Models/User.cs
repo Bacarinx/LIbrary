@@ -26,15 +26,22 @@ namespace Biblioteca.Models
             set => _ID = value;
         }
 
-        public string BorrowBooks {
-            get => BorrowBooks;
+        public List<string> BorrowBooks {
+            get => BorowBooks;
         }
 
         public void AddBorowBoook(Book book)
         {
-            if (BorowBooks.Count() > 2)
+            if (BorowBooks.Count() <= 2)
             {
-                BorowBooks.Add(book.Title);
+                if(book.FreeToLend)
+                {
+                    BorowBooks.Add(book.Title);
+                    book.LendBook(this);
+                } else 
+                {
+                    Console.WriteLine("O livro está com outra pessoa!");
+                }
             }
             else
             {
@@ -49,11 +56,6 @@ namespace Biblioteca.Models
             } else {
                 Console.WriteLine("Esse livro não está com você.");
             }
-        
         }
-
-        // public bool UserCanGetBook() {
-
-        // }
     }
 }
